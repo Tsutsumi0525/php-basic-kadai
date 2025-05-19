@@ -9,7 +9,7 @@
 <body>
     <p>
         <?php
-        function test_sort(array &$array, $order = true) {
+        function sort_2way(array &$array, $order = true) {
           if ($order) {
             sort($array);
           }else {
@@ -18,13 +18,13 @@
         }
         $nums = [15,4,18,23,10];
 
-        test_sort($nums);
+        sort_2way($nums);
         echo "昇順にソートします。<br>";
         foreach ($nums as $num) {
           echo $num . "<br>";
         }
 
-        test_sort($nums,false);
+        sort_2way($nums,false);
         echo "降順にソートします。<br>";
         foreach ($nums as $num) {
           echo $num . "<br>";
